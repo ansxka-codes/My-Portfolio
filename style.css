@@ -1,0 +1,123 @@
+*
+{
+    
+    margin: 0px;
+    padding:0px;
+    color: white;
+}
+body{
+    background-color: rgb(2, 2, 33);
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(42, 5, 77);
+    height: 5vw;
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+    
+}
+.left
+{
+    font-size: 1.5rem;
+}
+nav ul li
+{
+    margin: 0 23px;
+}
+nav ul li a
+{
+    text-decoration: none;
+    color: white;
+}
+nav ul li a:hover
+{
+    color: rgb(123, 123, 232);
+    font-size: 1.2rem;
+}
+.firstSection
+{
+    display: flex;
+    justify-content: space-around;
+    margin: 80px;
+    align-items: center;
+}
+.firstSection >div{
+    width:30%
+}
+.leftSection
+
+{
+    font-size: 3rem;
+    
+}
+.color
+{
+    color: rgb(149, 64, 229);
+}
+#element
+{
+    color: rgb(94, 175, 148);
+}
+.secondSection
+{
+    max-width: 75vw;
+    margin: auto;
+    height: 80vh
+}
+main hr
+{
+    border: 0;
+    background: rgb(143, 143, 235);
+    height: 2px;
+    margin: 40px 50px;
+}
+.secondSection h1{
+    font-size: 2rem;
+}
+.gray
+{
+    color: rgb(139, 134, 134);
+}
+.secondSection .box
+{
+    background-color: aliceblue;
+    width: 80vw;
+    height: 2px;
+    margin: 56px 0px;
+    display: flex;
+
+}
+.secondSection .vertical
+{
+    height: 50px;
+    width: 2px;
+    background-color: aliceblue;
+    margin: 0 100px;
+}
+.verticalImage
+{
+    width:23px;
+    position: relative;
+    top: -24px;
+    left: -10px;
+}
+.verticalTitle
+{
+    position: relative;
+    top: 23px;
+    right: 20px;
+}
+.firstSection .btn
+{
+    background-color: rgb(103 30 157);
+    color: aliceblue;
+    border: 2px snow;
+    border-radius: 6px;
+    font-size: 20px;
+    cursor:pointer;
+    position:relative;
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anshika | Web Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="claudestyle.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header>
+    <nav>
+      <div class="logo">Anshika<span class="dot">.</span></div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <p class="eyebrow">Hello, World 👋</p>
+        <h1>I'm <span class="accent">Anshika</span>,<br>Web Developer.</h1>
+        <p class="hero-sub">Student at IIIT Pune · Building things for the web.</p>
+        <p class="typed-wrapper"><span id="typed-text"></span><span class="cursor">|</span></p>
+        <div class="hero-btns">
+          <a href="#" class="btn btn-primary">Download Resume</a>
+          <a href="https://github.com" target="_blank" class="btn btn-outline">Visit GitHub</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="avatar-glow">
+          <img src="developer.png" alt="Developer illustration">
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills-section" id="skills">
+      <p class="section-eyebrow">What I've learnt so far</p>
+      <h2 class="section-title">Checkpoints</h2>
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img src="html logo.png" alt="HTML">
+          </div>
+          <div class="skill-info">
+            <h3>HTML</h3>
+            <p>Structure & semantics</p>
+          </div>
+          <span class="badge badge-done">Learnt ✓</span>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img src="css-icon.png" alt="CSS">
+          </div>
+          <div class="skill-info">
+            <h3>CSS</h3>
+            <p>Styling & layouts</p>
+          </div>
+          <span class="badge badge-done">Learnt ✓</span>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img src="javascript-39395.png" alt="JavaScript">
+          </div>
+          <div class="skill-info">
+            <h3>JavaScript</h3>
+            <p>Interactivity & logic</p>
+          </div>
+          <span class="badge badge-done">Learnt ✓</span>
+        </div>
+
+        <div class="skill-card skill-card--active">
+          <div class="skill-icon">
+            <img src="React.png" alt="React">
+          </div>
+          <div class="skill-info">
+            <h3>React</h3>
+            <p>Component-based UI</p>
+          </div>
+          <span class="badge badge-wip">In progress</span>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Made with 💜 by Anshika &nbsp;·&nbsp; <a href="https://github.com" target="_blank">GitHub</a></p>
+  </footer>
+
+  <script>
+    // Typewriter
+    const phrases = [
+      'This is my first project ✨',
+      'I am excited to do it!!',
+      'Always learning, always building 🚀'
+    ];
+    let pi = 0, ci = 0, deleting = false;
+    const el = document.getElementById('typed-text');
+
+    function tick() {
+      const full = phrases[pi];
+      if (!deleting) {
+        ci++;
+        el.textContent = full.slice(0, ci);
+        if (ci === full.length) {
+          deleting = true;
+          setTimeout(tick, 1800);
+          return;
+        }
+      } else {
+        ci--;
+        el.textContent = full.slice(0, ci);
+        if (ci === 0) {
+          deleting = false;
+          pi = (pi + 1) % phrases.length;
+        }
+      }
+      setTimeout(tick, deleting ? 40 : 65);
+    }
+    tick();
+
+    // Mobile nav toggle
+    document.querySelector('.nav-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
